@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include "mystring.h"
+#include <string.h>
 
 int main() {
-    char str1[] = "ABC";
-    char str2[] = "ABE";
+    char str1[] = "Rachit ";
+    char str2[] = "Hooda";
 
-    int cpm = stringcompare(str1, str2);
-    printf("%d\n", cpm);
+    // strcat(str1, str2);
+    stringconcat(str1, str2);
+    printf("%s\n", str1);
     return 0;
 }

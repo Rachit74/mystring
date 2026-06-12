@@ -37,5 +37,21 @@ int stringcompare(const char *str1, const char *str2) {
 
     return (*str1 > *str2) ? 1 : -1;
     
+}
+
+char *stringconcat(char *dest, char *source) {
+    char *start = dest;
+
+    while (*dest != '\0') {
+        dest++;
+    }
+
+    while (*source != '\0') {
+        *dest++ = *source++;
+    }
+
+    *dest = '\0';
+
+    return start;
 
 }
