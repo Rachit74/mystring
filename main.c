@@ -1,12 +1,24 @@
 #include <stdio.h>
 #include "mystring.h"
-#include <string.h>
+#include "vector.h"
+#include <stdlib.h>
 
 int main() {
-    char s[] = "Rachit";
-    
-    char *str1 = stringfindchar(s, 'x');
 
-    printf("%s\n", str1);
+    struct Vector vector;
+
+    vector_init(&vector, 5);
+    vector_push(&vector, 1);
+    vector_push(&vector, 2);
+    vector_push(&vector, 3);
+    vector_push(&vector, 4);
+    vector_push(&vector, 5);
+    
+
+    for(size_t i = 0; i < vector.size; i++) {
+        printf("%d\n", vector.arr[i]);
+    }
+        
+    vector_free(&vector);
     return 0;
 }
